@@ -1072,7 +1072,7 @@ function proactivity_replace_template($Name, $Data, $Userfor='', $Custom='') {
 	if ($Custom) {
 		//Use the passed one...
 		$foo = $Custom;
-	} elseif ($lang->$Name) {
+	} elseif (property_exists($lang, $Name)) {
 		//Use a predefined one...
 		$foo = $lang->$Name;
 	} else {
